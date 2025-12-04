@@ -62,19 +62,20 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: transparent;
     color: white;
+    border: 2px solid #0b883b;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #0b883b;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color);
+    color: white;
     border: 2px solid var(--primary-color);
 }
 
