@@ -48,49 +48,94 @@ body {
     padding: 0 calc(var(--spacing-unit) * 2);
 }
 
-/* Buttons */
+
+
+/* button */
 .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
 }
 
-.btn-primary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid #0b883b;
-}
-
-.btn-primary:hover {
-    background-color: #0b883b;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.btn:hover,
+.btn:focus {
+  color: #ffffff;
+  background: #00ff2a;
+  border: 1px solid #00ff2a;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #00ff2a, 0 0 20px #00ff2a, 0 0 50px #00ff2a,
+    0 0 100px #00ff2a;
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid var(--primary-color);
+      padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
 }
 
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-    color: white;
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
 }
+
+.btn-third {
+      padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #BF1A1A;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #BF1A1A;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.btn-third:hover,
+.btn-third:focus {
+  color: #ffffff;
+  background: #BF1A1A;
+  border: 1px solid #BF1A1A;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #BF1A1A, 0 0 20px #BF1A1A, 0 0 50px #BF1A1A,
+    0 0 100px #BF1A1A;
+}
+/* button */
+
 
 /* ===========================
    HEADER
    =========================== */
 .main-header {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -106,8 +151,18 @@ body {
 
 .logo h1 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: rgb(110, 140, 251);
 }
+
+
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
 
 .main-nav ul {
     display: flex;
@@ -130,25 +185,28 @@ body {
    HERO SECTION
    =========================== */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, #1B3C53, #456882);
     color: white;
     text-align: center;
     padding: 6rem 0;
-    margin-bottom: 4rem;
+    margin-bottom: 1;
 }
 
 .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 500;
+    color: #fff;
 }
 
 .hero-description {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
+    color: #fff;
 }
 
 .hero-cta {
@@ -160,6 +218,10 @@ body {
 /* ===========================
    SECTIONS
    =========================== */
+
+
+
+
 section {
     padding: 4rem 0;
 }
@@ -168,13 +230,14 @@ section h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--dark-color);
+    color: white;
+    font-weight: 400;
 }
 
 .section-description {
     text-align: center;
-    font-size: 1.1rem;
-    color: var(--secondary-color);
+    font-size: 1rem;
+    color: white;
     margin-bottom: 3rem;
     max-width: 700px;
     margin-left: auto;
@@ -182,6 +245,59 @@ section h2 {
 }
 
 /* Features Grid */
+/* box */
+.features-section, .problem-section, .how-section, .about-section {
+    position: relative;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    margin-bottom: 1px;
+}
+
+.bg-box1 {
+    background: #434E78;      
+    border-radius: 20px;      /* มุมโค้ง 32px */
+    width: 100%;
+    max-width: 1300px;
+    padding: 50px;          /* เว้นช่องด้านใน */
+    position: relative;             
+}
+
+.bg-box {
+    background: #607B8F;      
+    border-radius: 20px;      /* มุมโค้ง 32px */
+    width: 100%;
+    max-width: 1300px;
+    padding: 50px;          /* เว้นช่องด้านใน */
+    position: relative;             
+}
+
+.bg-box2 {
+    background: #F7E396;      
+    border-radius: 20px;      /* มุมโค้ง 32px */
+    width: 100%;
+    max-width: 1300px;
+    padding: 50px;          /* เว้นช่องด้านใน */
+    position: relative;             
+}
+
+.bg-box3 {
+    background: #E97F4A;      
+    border-radius: 20px;      /* มุมโค้ง 32px */
+    width: 100%;
+    max-width: 1300px;
+    padding: 50px;          /* เว้นช่องด้านใน */
+    position: relative;             
+}
+
+.features-section .container, .problem-section .container {
+    position: relative;       /* ทำให้ z-index ซ้อนถูก */
+    z-index: 5;
+}
+/* box */
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -262,6 +378,12 @@ section h2 {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-8px);   /* ลอยขึ้น */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เงาเข้มขึ้น */
 }
 
 .team-member img {
@@ -371,6 +493,7 @@ section h2 {
     section h2 {
         font-size: 2rem;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -387,81 +510,9 @@ section h2 {
     }
 }
 
-/* From Uiverse.io by mrhyddenn */ 
-button {
-  position: relative;
-  padding: 10px 20px;
-  border-radius: 7px;
-  border: 1px solid rgb(61, 106, 255);
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-  background: transparent;
-  color: #fff;
-  overflow: hidden;
-  box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
 
-button:hover {
-  background: rgb(61, 106, 255);
-  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
 
-button:hover::before {
-  -webkit-animation: sh02 0.5s 0s linear;
-  -moz-animation: sh02 0.5s 0s linear;
-  animation: sh02 0.5s 0s linear;
-}
-
-button::before {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 86%;
-  position: absolute;
-  top: 7%;
-  left: 0%;
-  opacity: 0;
-  background: #fff;
-  box-shadow: 0 0 50px 30px #fff;
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
-  transform: skewX(-20deg);
-}
-
-@keyframes sh02 {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    left: 100%;
-  }
-}
-
-button:active {
-  box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: box-shadow 0.2s ease-in;
-  -moz-transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
-}
-
-/* From Uiverse.io by Admin12121 */ 
+/* navbar */ 
 .menu {
   padding: 0.5rem;
   background-color: #fff;
@@ -536,3 +587,4 @@ button:active {
   text-indent: 28px;
   width: 100%;
 }
+/* navbar */ 
