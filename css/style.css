@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* ===========================
    CSS Reset & Base Styles
    =========================== */
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,13 +18,13 @@
     --light-color: #f8f9fa;
     --dark-color: #343a40;
     --text-color: #212529;
-    
+
     /* Typography */
     --font-primary: 'kanit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-size-base: 16px;
     --font-size-lg: 1.25rem;
     --font-size-xl: 2rem;
-    
+
     /* Spacing */
     --spacing-unit: 1rem;
     --container-width: 1200px;
@@ -52,82 +53,83 @@ body {
 
 /* button */
 .btn {
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #ffffff80;
-  text-shadow: none;
-  background: transparent;
-  cursor: pointer;
-  box-shadow: transparent;
-  border: 1px solid #ffffff80;
-  transition: 0.5s ease;
-  user-select: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
 }
 
 .btn:hover,
 .btn:focus {
-  color: #ffffff;
-  background: #00ff2a;
-  border: 1px solid #00ff2a;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  box-shadow: 0 0 5px #00ff2a, 0 0 20px #00ff2a, 0 0 50px #00ff2a,
-    0 0 100px #00ff2a;
+    color: #ffffff;
+    background: #00ff2a;
+    border: 1px solid #00ff2a;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #00ff2a, 0 0 20px #00ff2a, 0 0 50px #00ff2a,
+        0 0 100px #00ff2a;
 }
 
 .btn-secondary {
-      padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #ffffff80;
-  text-shadow: none;
-  background: transparent;
-  cursor: pointer;
-  box-shadow: transparent;
-  border: 1px solid #ffffff80;
-  transition: 0.5s ease;
-  user-select: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #ffffff;
-  background: #008cff;
-  border: 1px solid #008cff;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
-    0 0 100px #008cff;
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+        0 0 100px #008cff;
 }
 
 .btn-third {
-      padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #BF1A1A;
-  text-shadow: none;
-  background: transparent;
-  cursor: pointer;
-  box-shadow: transparent;
-  border: 1px solid #BF1A1A;
-  transition: 0.5s ease;
-  user-select: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #BF1A1A;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #BF1A1A;
+    transition: 0.5s ease;
+    user-select: none;
 }
 
 .btn-third:hover,
 .btn-third:focus {
-  color: #ffffff;
-  background: #BF1A1A;
-  border: 1px solid #BF1A1A;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  box-shadow: 0 0 5px #BF1A1A, 0 0 20px #BF1A1A, 0 0 50px #BF1A1A,
-    0 0 100px #BF1A1A;
+    color: #ffffff;
+    background: #BF1A1A;
+    border: 1px solid #BF1A1A;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #BF1A1A, 0 0 20px #BF1A1A, 0 0 50px #BF1A1A,
+        0 0 100px #BF1A1A;
 }
+
 /* button */
 
 
@@ -234,6 +236,22 @@ section h2 {
     font-weight: 400;
 }
 
+section h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 400;
+}
+
+section h4 {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 400;
+}
+
 .section-description {
     text-align: center;
     font-size: 1rem;
@@ -246,7 +264,10 @@ section h2 {
 
 /* Features Grid */
 /* box */
-.features-section, .problem-section, .how-section, .about-section {
+.features-section,
+.problem-section,
+.how-section,
+.about-section {
     position: relative;
     padding: 20px 0;
     margin: 0;
@@ -257,45 +278,56 @@ section h2 {
 }
 
 .bg-box1 {
-    background: #434E78;      
-    border-radius: 20px;      /* มุมโค้ง 32px */
+    background: #1B3C53;
+    border-radius: 20px;
+    /* มุมโค้ง 32px */
     width: 100%;
     max-width: 1300px;
-    padding: 50px;          /* เว้นช่องด้านใน */
-    position: relative;             
+    padding: 50px;
+    /* เว้นช่องด้านใน */
+    position: relative;
 }
 
 .bg-box {
-    background: #607B8F;      
-    border-radius: 20px;      /* มุมโค้ง 32px */
+    background: #234C6A;
+    border-radius: 20px;
+    /* มุมโค้ง 32px */
     width: 100%;
     max-width: 1300px;
-    padding: 50px;          /* เว้นช่องด้านใน */
-    position: relative;             
+    padding: 50px;
+    /* เว้นช่องด้านใน */
+    position: relative;
 }
 
 .bg-box2 {
-    background: #F7E396;      
-    border-radius: 20px;      /* มุมโค้ง 32px */
+    background: #456882;
+    border-radius: 20px;
+    /* มุมโค้ง 32px */
     width: 100%;
     max-width: 1300px;
-    padding: 50px;          /* เว้นช่องด้านใน */
-    position: relative;             
+    padding: 50px;
+    /* เว้นช่องด้านใน */
+    position: relative;
 }
 
 .bg-box3 {
-    background: #E97F4A;      
-    border-radius: 20px;      /* มุมโค้ง 32px */
+    background: #E3E3E3;
+    border-radius: 20px;
+    /* มุมโค้ง 32px */
     width: 100%;
     max-width: 1300px;
-    padding: 50px;          /* เว้นช่องด้านใน */
-    position: relative;             
+    padding: 50px;
+    /* เว้นช่องด้านใน */
+    position: relative;
 }
 
-.features-section .container, .problem-section .container {
-    position: relative;       /* ทำให้ z-index ซ้อนถูก */
+.features-section .container,
+.problem-section .container {
+    position: relative;
+    /* ทำให้ z-index ซ้อนถูก */
     z-index: 5;
 }
+
 /* box */
 
 .features-grid {
@@ -382,8 +414,10 @@ section h2 {
 }
 
 .team-member:hover {
-    transform: translateY(-8px);   /* ลอยขึ้น */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เงาเข้มขึ้น */
+    transform: translateY(-8px);
+    /* ลอยขึ้น */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* เงาเข้มขึ้น */
 }
 
 .team-member img {
@@ -462,34 +496,34 @@ section h2 {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .main-nav ul {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
     }
-    
+
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-description {
         font-size: 1rem;
     }
-    
+
     .hero-cta {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .steps {
         flex-direction: column;
     }
-    
+
     section h2 {
         font-size: 2rem;
     }
@@ -500,11 +534,11 @@ section h2 {
     html {
         font-size: 14px;
     }
-    
+
     .hero-title {
         font-size: 1.75rem;
     }
-    
+
     section {
         padding: 2rem 0;
     }
@@ -512,79 +546,82 @@ section h2 {
 
 
 
-/* navbar */ 
+/* navbar */
 .menu {
-  padding: 0.5rem;
-  background-color: #fff;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px 0 rgba(#000, 0.075);
+    padding: 0.5rem;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px 0 rgba(#000, 0.075);
 }
 
 .link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 50px;
-  border-radius: 8px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transform-origin: center left;
-  transition: width 0.2s ease-in;
-  text-decoration: none;
-  color: inherit;
-  &:before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: translateX(100%);
-    transition: transform 0.2s ease-in;
-    transform-origin: center right;
-    background-color: #eee;
-  }
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.2s ease-in;
+    text-decoration: none;
+    color: inherit;
 
-  &:hover,
-  &:focus {
-    outline: 0;
-    width: 130px;
-
-    &:before,
-    .link-title {
-      transform: translateX(0);
-      opacity: 1;
+    &:before {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        display: block;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 0.2s ease-in;
+        transform-origin: center right;
+        background-color: #eee;
     }
-  }
+
+    &:hover,
+    &:focus {
+        outline: 0;
+        width: 130px;
+
+        &:before,
+        .link-title {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 }
 
 .link-icon {
-  width: 28px;
-  height: 28px;
-  display: block;
-  flex-shrink: 0;
-  left: 18px;
-  position: absolute;
-  svg {
     width: 28px;
     height: 28px;
-  }
+    display: block;
+    flex-shrink: 0;
+    left: 18px;
+    position: absolute;
+
+    svg {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 .link-title {
-  transform: translateX(100%);
-  transition: transform 0.2s ease-in;
-  transform-origin: center right;
-  display: block;
-  text-align: center;
-  text-indent: 28px;
-  width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    display: block;
+    text-align: center;
+    text-indent: 28px;
+    width: 100%;
 }
-/* navbar */ 
+
+/* navbar */
