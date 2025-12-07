@@ -51,4 +51,28 @@ Version Control: Git, GitHub
 │ └── style.css # ไฟล์ CSS สำหรับจัดรูปแบบ Landing Page (NFR-014: Responsive Design)
 ├── index.html # ไฟล์ Landing Page (HTML5 Semantic Structure)
 ├── SRS.pdf # เอกสาร Software Requirements Specification ฉบับสมบูรณ์
-└── README.md # ข้อมูลสรุปโปรเจกต์และทีม (ไฟล์นี้)
+└── README.md # ข้อมูลสรุปโปรเจกต์และทีม 
+
+
+
+
+
+
+## 📖 Documentation
+- [Software Requirements Specification (SRS)](./SRS_Draft.md)
+- [User Interview Notes](./docs/interview_notes.md)
+
+## 🌐 Demo
+- **Live Demo:** [https://username.github.io/project-name/](https://username.github.io/project-name/) 
+- **GitHub Pages:** Coming soon...
+
+## 🏃‍♂️ How to Run Locally
+```bash
+# 1. Clone repository
+git clone https://github.com/username/project-name.git
+
+# 2. Navigate to project folder
+cd project-name
+
+# 3. Open with Live Server (VSCode Extension)
+# Or simply open index.html in browser
