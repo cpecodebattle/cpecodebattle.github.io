@@ -31,17 +31,23 @@ EventHub คือ Digital Solution ที่พัฒนาขึ้นเพ�
 -ระบบสแกน QR Code สำหรับยืนยันการเข้าร่วมงานในวันจริง 
 -รองรับการแสดงผลบน Desktop, Tablet และ Mobile ทุกขนาดหน้าจอ
 
-## 🛠️ Tech Stack
--HTML5, CSS3, JavaScript
--Node.js, Express
--MongoDB
--Git, GitHub
+## Tech Stack
+การพัฒนาโปรเจกต์นี้เริ่มต้นด้วยเทคโนโลยีพื้นฐาน และวางแผนที่จะขยายไปยัง Tech Stack หลักตามที่ระบุใน SRS:
 
-## 📂 Project Structure
+Frontend: HTML5, CSS3, JavaScript (วางแผนจะใช้ SvelteKit ใน Phase ถัดไป)
+
+Backend (Planned): Node.js, Express
+
+Database (Planned): MongoDB
+
+Version Control: Git, GitHub
+
+## Project Structure
 โครงสร้างโปรเจกต์ประกอบด้วยไฟล์เอกสาร SRS และไฟล์สำหรับ Landing Page ดังนี้:
 
+.
 ├── css/
-│ └── style.css # ไฟล์ CSS Landing Page
-├── index.html # ไฟล์ Landing Page
-├── SRS.pdf # เอกสาร Software Requirements Specification
-└── README.md # ข้อมูลสรุปโปรเจกต์และทีม
+│   └── style.css          # ไฟล์ CSS สำหรับจัดรูปแบบ Landing Page (NFR-014: Responsive Design)
+├── index.html             # ไฟล์ Landing Page (HTML5 Semantic Structure)
+├── SRS.pdf                # เอกสาร Software Requirements Specification ฉบับสมบูรณ์
+└── README.md              # ข้อมูลสรุปโปรเจกต์และทีม (ไฟล์นี้)
