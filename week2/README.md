@@ -40,9 +40,8 @@ EventHub คือ Digital Solution ที่พัฒนาขึ้นเพ�
 ## 📂 Project Structure
 โครงสร้างโปรเจกต์ประกอบด้วยไฟล์เอกสาร SRS และไฟล์สำหรับ Landing Page ดังนี้:
 
-
 ├── css/
-│   └── style.css          # ไฟล์ CSS Landing Page 
-├── index.html             # ไฟล์ Landing Page 
-├── SRS.pdf                # เอกสาร Software Requirements Specification
-└── README.md              # ข้อมูลสรุปโปรเจกต์และทีม 
+│ └── style.css # ไฟล์ CSS Landing Page
+├── index.html # ไฟล์ Landing Page
+├── SRS.pdf # เอกสาร Software Requirements Specification
+└── README.md # ข้อมูลสรุปโปรเจกต์และทีม
