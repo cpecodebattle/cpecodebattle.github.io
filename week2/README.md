@@ -51,4 +51,4 @@ Version Control: Git, GitHub
 │ └── style.css # ไฟล์ CSS สำหรับจัดรูปแบบ Landing Page (NFR-014: Responsive Design)
 ├── index.html # ไฟล์ Landing Page (HTML5 Semantic Structure)
 ├── SRS.pdf # เอกสาร Software Requirements Specification ฉบับสมบูรณ์
-└── README.md # ข้อมูลสรุปโปรเจกต์และทีม (ไฟล์นี้)
+└── README.md # ข้อมูลสรุปโปรเจกต์และทีม 
