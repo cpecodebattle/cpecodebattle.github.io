@@ -34,11 +34,11 @@ EventHub คือ Digital Solution ที่พัฒนาขึ้นเพ�
 ## Tech Stack
 การพัฒนาโปรเจกต์นี้เริ่มต้นด้วยเทคโนโลยีพื้นฐาน และวางแผนที่จะขยายไปยัง Tech Stack หลักตามที่ระบุใน SRS:
 
-Frontend: HTML5, CSS3, JavaScript (วางแผนจะใช้ SvelteKit ใน Phase ถัดไป)
+Frontend: HTML5, CSS3, JavaScript
 
-Backend (Planned): Node.js, Express
+Backend: Node.js, Express
 
-Database (Planned): MongoDB
+Database: MongoDB
 
 Version Control: Git, GitHub
 
