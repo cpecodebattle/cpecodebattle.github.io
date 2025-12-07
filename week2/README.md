@@ -45,9 +45,10 @@ Version Control: Git, GitHub
 ## Project Structure
 โครงสร้างโปรเจกต์ประกอบด้วยไฟล์เอกสาร SRS และไฟล์สำหรับ Landing Page ดังนี้:
 
+
 .
 ├── css/
-│   └── style.css          # ไฟล์ CSS สำหรับจัดรูปแบบ Landing Page (NFR-014: Responsive Design)
-├── index.html             # ไฟล์ Landing Page (HTML5 Semantic Structure)
-├── SRS.pdf                # เอกสาร Software Requirements Specification ฉบับสมบูรณ์
-└── README.md              # ข้อมูลสรุปโปรเจกต์และทีม (ไฟล์นี้)
+│ └── style.css # ไฟล์ CSS สำหรับจัดรูปแบบ Landing Page (NFR-014: Responsive Design)
+├── index.html # ไฟล์ Landing Page (HTML5 Semantic Structure)
+├── SRS.pdf # เอกสาร Software Requirements Specification ฉบับสมบูรณ์
+└── README.md # ข้อมูลสรุปโปรเจกต์และทีม (ไฟล์นี้)
