@@ -2,114 +2,189 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About · ENGCE301 Lab Submission Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>About</title>
 </head>
 <body>
+    <section>
+    <h2>UC-03: Submit Lab (การส่งงาน Lab)</h2>
 
-<div class="page-container">
+    <p>
+        <strong>Primary Actor:</strong> Student (นักศึกษา)
+        <br>
+        <strong>Goal:</strong> เพื่อให้นักศึกษาส่งไฟล์งาน Lab (ตาม FR-3: File Upload) เข้าสู่ระบบได้ทันกำหนดเวลา
+        เพื่อรับคะแนนตามที่กำหนดไว้
+    </p>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="logo">
-            <span class="logo-mark">ENGCE301</span>
-            <span class="logo-text">Lab Submission Portal</span>
-        </div>
+    <h3>Preconditions (เงื่อนไขก่อนเริ่ม)</h3>
+    <ul>
+        <li>นักศึกษาต้อง <strong>เข้าสู่ระบบ (Logged In)</strong> เรียบร้อยแล้ว (อิงจาก UC-02 Log In)</li>
+        <li>ต้องมี <strong>Lab</strong> ที่กำลังเปิดรับการส่งงานอยู่</li>
+        <li>นักศึกษาต้องมี <strong>ไฟล์งาน Lab</strong> ที่พร้อมส่ง</li>
+    </ul>
 
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="my-labs.html" class="nav-link">My Labs</a>
-            <a href="about.html" class="nav-link active">About</a>
-        </nav>
-    </header>
+    <hr>
 
-    <!-- CONTENT -->
-    <main>
-        <section class="section">
-            <header class="section-header">
-                <h2>About This Portal</h2>
-                <p>
-                    This page explains how the ENGCE301 Lab Submission Portal
-                    is derived from your SRS, User Stories and Use Cases.
-                </p>
-            </header>
+    <h3>Postconditions (เงื่อนไขหลังสำเร็จ)</h3>
+    <ul>
+        <li><strong>สถานะการส่งงาน (Submission Status)</strong> ของ Lab นั้นต้องเปลี่ยนเป็น <strong>'Submitted'</strong>
+            หรือ <strong>'Late Submission'</strong></li>
+        <li>ไฟล์งานถูกจัดเก็บในระบบอย่างปลอดภัย (ตาม FR-3)</li>
+        <li>วันที่และเวลาที่ส่งถูกบันทึกไว้ในฐานข้อมูลเพื่อใช้ในการคำนวณคะแนนตามนโยบายล่าช้า (FR-4)</li>
+    </ul>
 
-            <div class="content-grid">
-                <article class="content-card">
-                    <h3>System Overview</h3>
-                    <p>
-                        <!-- TODO: Student – เขียนคำอธิบายสั้น ๆ ของระบบตาม SRS ของกลุ่ม -->
-                        The portal allows students to view lab details, submit lab work,
-                        and track their grades, while instructors can create labs,
-                        review submissions and provide feedback.
-                    </p>
-                </article>
+    <hr>
 
-                <article class="content-card">
-                    <h3>From SRS to Screens</h3>
-                    <ul>
-                        <!-- TODO: Student – ปรับให้ตรงกับ SRS จริงของกลุ่ม -->
-                        <li><strong>FR-2 View Lab List</strong> → Upcoming Labs section on Home page</li>
-                        <li><strong>FR-3 Submit Lab</strong> → Future page: Lab Detail / Submission form</li>
-                        <li><strong>FR-6 Grading &amp; Feedback</strong> → My Labs page + Instructor view</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+    <h3>Main Flow (Happy Path)</h3>
+    <ol>
+        <li>นักศึกษาเลือก Lab ที่ต้องการส่งงานจากหน้า Lab List (UC-01) หรือหน้า My Labs (UC-04)</li>
+        <li>ระบบแสดงหน้า Lab Submission ที่ประกอบด้วยรายละเอียดงานและฟอร์มอัปโหลด</li>
+        <li>นักศึกษา <strong>เลือกไฟล์งาน</strong> ที่ต้องการอัปโหลด (ตามประเภทที่กำหนดใน FR-3)</li>
+        <li>นักศึกษาคลิกปุ่ม <strong>"Submit"</strong></li>
+        <li><strong>ระบบตรวจสอบ</strong> วันที่และเวลาที่ส่งเทียบกับ Deadline:
+            <ul>
+                <li>หากส่ง <strong>ก่อน Deadline:</strong> ระบบเปลี่ยนสถานะเป็น <strong>'Submitted'</strong></li>
+                <li>หากส่ง <strong>หลัง Deadline แต่ยังอยู่ในช่วงผ่อนผัน (Grace Period):</strong> ระบบเปลี่ยนสถานะเป็น
+                    <strong>'Late Submission'</strong>
+                </li>
+            </ul>
+        </li>
+        <li>ระบบแสดงข้อความยืนยันการส่งงานสำเร็จ (เช่น "Submission Successful. Status: Submitted.")</li>
+        <li>ระบบพานักศึกษากลับไปยังหน้า My Labs ซึ่งแสดงสถานะงานที่อัปเดตแล้ว</li>
+    </ol>
 
-        <section class="section">
-            <header class="section-header">
-                <h2>Mapping: User Stories → UI Elements</h2>
-                <p>Use this section to explicitly map each user story to parts of the UI.</p>
-            </header>
+    <hr>
 
-            <div class="content-grid">
-                <article class="content-card">
-                    <h3>Example Mapping</h3>
-                    <ul>
-                        <li>
-                            <strong>US-01 – View Lab List</strong><br>
-                            <span class="text-muted">
-                                → Implemented as the “Upcoming Labs” cards on the Home page.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>US-02 – Submit Lab File</strong><br>
-                            <span class="text-muted">
-                                → Will be implemented as a detailed lab page with a submission form.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>US-03 – View My Lab Status</strong><br>
-                            <span class="text-muted">
-                                → Represented by the “My Lab Status” section and extended in my-labs.html.
-                            </span>
-                        </li>
-                    </ul>
-                </article>
+    <h3>Alternative Flows / Exceptions</h3>
 
-                <article class="content-card">
-                    <h3>TODO: Your Group Mapping</h3>
-                    <p>
-                        <!-- TODO: Student – ให้กลุ่มของคุณกรอก mapping จริงของกลุ่มที่ใช้ใน Term Project -->
-                        Replace this text with your own mapping between:
-                        <strong>your SRS / User Stories / Use Cases</strong> and the
-                        actual pages/components in this mini portal.
-                    </p>
-                </article>
-            </div>
-        </section>
-    </main>
+    <h4>AF-1 – ส่งไฟล์ผิดประเภท (FR-3 File Type Error)</h4>
+    <ol>
+        <li>นักศึกษาเลือกไฟล์ที่มีนามสกุลไม่ตรงกับที่กำหนด (เช่น อัปโหลด .jpg แทน .zip)</li>
+        <li>ระบบ <strong>ปฏิเสธ</strong> การอัปโหลดและแสดงข้อความแจ้งเตือน: "File type not supported. Please upload only
+            .zip or .rar files."</li>
+        <li>นักศึกษากลับไปทำขั้นตอนที่ 3 ใน Main Flow</li>
+    </ol>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <p>ENGCE301 – Software Design &amp; Development · Week 3</p>
-        <p class="footer-small">
-            About page: explain how requirements are transformed into UI.
-        </p>
-    </footer>
-</div>
+    <h4>AF-2 – ส่งงานเกินช่วงผ่อนผัน (FR-4 Policy Violation)</h4>
+    <ol>
+        <li>นักศึกษาพยายามส่งงาน <strong>หลัง</strong> ช่วงผ่อนผัน (Grace Period) ที่กำหนดไว้ (เช่น 3 วันหลัง Deadline)
+        </li>
+        <li>ระบบ <strong>ปฏิเสธ</strong> การส่งงานและแสดงข้อความแจ้งเตือน: "Submission is permanently closed for this
+            Lab. Please contact your instructor."</li>
+        <li>Use Case สิ้นสุดลงโดยไม่มีการเปลี่ยนแปลง Postconditions</li>
+    </ol>
 
+    <h4>AF-3 – การส่งซ้ำ</h4>
+    <ol>
+        <li>นักศึกษาส่งงาน Lab เดิมซ้ำอีกครั้ง (กลับไปที่ Main Flow ข้อ 3)</li>
+        <li>ระบบจะบันทึก การส่งครั้งล่าสุดเป็น <strong>Final Submission</strong> และอัปเดตวันที่/เวลาส่ง</li>
+        <li>ระบบแสดงข้อความยืนยันว่า "Submission updated. This is your final version."</li>
+    </ol>
+</section>
+
+<section>
+    <h2>UC-04: View My Lab Status (ดูสถานะงาน Lab ของตนเอง)</h2>
+    
+    <p>
+        <strong>Primary Actor:</strong> Student (นักศึกษา)
+        <br>
+        <strong>Goal:</strong> เพื่อให้นักศึกษาสามารถตรวจสอบสถานะการส่งงานและผลคะแนน (ถ้ามี) ของ Lab ทั้งหมดได้อย่างรวดเร็วและเป็นระเบียบ (ตาม US-04 และ US-05)
+    </p>
+
+    <h3>Preconditions (เงื่อนไขก่อนเริ่ม)</h3>
+    <ul>
+        <li>นักศึกษาต้อง <strong>เข้าสู่ระบบ (Logged In)</strong> เรียบร้อยแล้ว (อิงจาก UC-02 Log In)</li>
+    </ul>
+
+    <hr>
+
+    <h3>Postconditions (เงื่อนไขหลังสำเร็จ)</h3>
+    <ul>
+        <li>ระบบแสดงตารางสถานะงาน Lab ของนักศึกษา โดยรวมข้อมูล: ชื่อ Lab, วันครบกำหนด, สถานะการส่ง, และคะแนนที่ได้รับ (ถ้ามี)</li>
+        <li>สถานะการส่งงานล่าช้า (**Late Submission**) ถูกแสดงอย่างชัดเจน (ตาม US-05)</li>
+    </ul>
+
+    <hr>
+
+    <h3>Main Flow (Happy Path)</h3>
+    <ol>
+        <li>นักศึกษาคลิกที่ลิงก์หรือปุ่ม <strong>"My Labs"</strong> หรือ <strong>"Check My Lab Status"</strong></li>
+        <li>ระบบทำการดึงข้อมูลงาน Lab ทั้งหมดที่เกี่ยวข้องกับนักศึกษาคนนั้นจากฐานข้อมูล</li>
+        <li>ระบบแสดงตาราง **Lab Status** ซึ่งประกอบด้วย:
+            <ul>
+                <li>ชื่อ Lab, วันครบกำหนด (Deadline)</li>
+                <li>สถานะการส่งงาน: "Submitted", "Not Submitted", "Graded"</li>
+                <li>คะแนนที่ได้รับ (ถ้ามี)</li>
+            </ul>
+        </li>
+        <li>หากมีการส่งงานล่าช้า ระบบจะเน้นสถานะเป็น <strong>'Late Submission'</strong> (ตาม US-05)</li>
+        <li>นักศึกษาสามารถตรวจสอบสถานะงานทั้งหมดได้</li>
+    </ol>
+
+    <hr>
+
+    <h3>Alternative Flows / Exceptions</h3>
+
+    <h4>AF-1 – ไม่มีข้อมูล Lab</h4>
+    <ol>
+        <li>ระบบไม่พบ Lab ใดๆ ที่กำหนดให้นักศึกษาคนนี้</li>
+        <li>ระบบแสดงข้อความแจ้งเตือน: "No Lab assignments found for your account."</li>
+        <li>Use Case สิ้นสุดลง</li>
+    </ol>
+</section>
+
+
+
+<section>
+    <h2>UC-05: View Lab Details (ดูรายละเอียดเฉพาะของงาน Lab)</h2>
+    
+    <p>
+        <strong>Primary Actor:</strong> Student (นักศึกษา)
+        <br>
+        <strong>Goal:</strong> เพื่อให้นักศึกษาสามารถเข้าถึงรายละเอียด, ข้อกำหนด, และเอกสารประกอบการทำ Lab เฉพาะงานนั้น ๆ ได้อย่างครบถ้วน
+    </p>
+
+    <h3>Preconditions (เงื่อนไขก่อนเริ่ม)</h3>
+    <ul>
+        <li>นักศึกษาต้อง <strong>เข้าสู่ระบบ (Logged In)</strong> เรียบร้อยแล้ว (อิงจาก UC-02 Log In)</li>
+        <li>Lab นั้นต้องถูกเผยแพร่แล้วและมีรายละเอียดพร้อมแสดง</li>
+    </ul>
+
+    <hr>
+
+    <h3>Postconditions (เงื่อนไขหลังสำเร็จ)</h3>
+    <ul>
+        <li>ระบบแสดงหน้า **Lab Detail** ที่ประกอบด้วยข้อกำหนดการทำ Lab, วันครบกำหนด, เกณฑ์การให้คะแนน, และลิงก์สำหรับดาวน์โหลดเอกสารที่เกี่ยวข้อง (เช่น โจทย์ Lab)</li>
+    </ul>
+
+    <hr>
+
+    <h3>Main Flow (Happy Path)</h3>
+    <ol>
+        <li>นักศึกษาอยู่ที่หน้า Lab List (UC-01) หรือ My Labs (UC-04)</li>
+        <li>นักศึกษาคลิกที่ชื่อ Lab (หรือปุ่ม "Details") ของงาน Lab ที่สนใจ</li>
+        <li>ระบบดึงข้อมูลรายละเอียดทั้งหมดของ Lab นั้นจากฐานข้อมูล</li>
+        <li>ระบบแสดงหน้าจอ **Lab Details** ซึ่งประกอบด้วย:
+            <ul>
+                <li>ชื่อและคำอธิบาย Lab โดยละเอียด</li>
+                <li>วันเวลาครบกำหนด (**Deadline**) และคะแนนเต็ม</li>
+                <li>ไฟล์เอกสารที่เกี่ยวข้อง (เช่น โจทย์ Lab เป็น PDF)</li>
+                <li>เกณฑ์การให้คะแนนหรือ Rubric สั้น ๆ</li>
+            </ul>
+        </li>
+        <li>นักศึกษาสามารถอ่านรายละเอียดและดาวน์โหลดเอกสารได้</li>
+    </ol>
+
+    <hr>
+
+    <h3>Alternative Flows / Exceptions</h3>
+
+    <h4>AF-1 – Lab ไม่พร้อมใช้งาน (Not Published)</h4>
+    <ol>
+        <li>นักศึกษาพยายามเข้าถึงรายละเอียด Lab ที่อาจารย์ยังไม่ได้เผยแพร่</li>
+        <li>ระบบแสดงข้อความปฏิเสธการเข้าถึง: "This Lab is currently not published or is no longer available."</li>
+        <li>Use Case สิ้นสุดลง</li>
+    </ol>
+</section>
 </body>
 </html>
