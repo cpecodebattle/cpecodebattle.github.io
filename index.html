@@ -1,404 +1,251 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[คำอธิบายโปรเจกต์สั้นๆ 150-160 ตัวอักษร]">
-    <meta name="keywords" content="[คีย์เวิร์ดสำคัญ]">
-    <meta name="author" content="Group XX - ENGCE301">
-    <title>Events Hub - ENGCE301 Term Project</title>
+    <meta name="description" content="EventsHub แพลตฟอร์มบริหารจัดการกิจกรรมอัจฉริยะสำหรับ Smart Campus">
+    <meta name="author" content="Group CPENo.1 - ENGCE301">
+    <title>Events Hub | The Future of Campus Events</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- =========================== HEADER =========================== -->
     <header class="main-header">
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo">
-                <p>EventsHub</p>
-                
-            </div>
+        <nav class="container nav-wrapper">
+            <a href="#home" class="logo">
+                <span class="logo-dot"></span>
+                <p>Events<span>Hub</span></p>
+            </a>
 
-            <!-- Navigation Menu -->
-            <div class="menu">
-                <a href="#" class="link">
-                    <span class="link-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                        </svg>
-                    </span>
-                    <span class="link-title">Home</span>
-                </a>
-
-                <a href="#features" class="link">
-                    <span class="link-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                        </svg>
-
-
-                    </span>
-                    <span class="link-title">features</span>
-                </a>
-                <a href="#about" class="link">
-                    <span class="link-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <path
-                                d="M45.42853,176.99811A95.95978,95.95978,0,1,1,79.00228,210.5717l.00023-.001L45.84594,220.044a8,8,0,0,1-9.89-9.89l9.47331-33.15657Z"
-                                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="16"></path>
-                            <line x1="96" y1="112" x2="160" y2="112" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        </svg>
-                    </span>
-                    <span class="link-title">About</span>
-                </a>
-
-                <a href="#team" class="link">
-                    <span class="link-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-people" viewBox="0 0 16 16">
-                            <path
-                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
-                        </svg>
-                    </span>
-                    <span class="link-title">Team</span>
-                </a>
-
-
-                <a href="#contact" class="link">
-                    <span class="link-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                        </svg>
-
-                    </span>
-                    <span class="link-title">Contact</span>
-                </a>
-            </div>
-        </div>
-
+            <ul class="menu">
+                <li><a href="#home" class="link active">Home</a></li>
+                <li><a href="#problem" class="link">Vision</a></li>
+                <li><a href="#features" class="link">Features</a></li>
+                <li><a href="#how-it-works" class="link">How it works</a></li>
+                <li><a href="#team" class="link">Team</a></li>
+                <li><a href="#contact" class="btn-nav">Get Started</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- =========================== MAIN CONTENT =========================== -->
     <main>
-        <!-- Hero Section -->
         <section id="home" class="hero-section">
-            <div class="container">
-                <h2 class="hero-title">
-                    ศูนย์รวมที่ให้คุณไม่พลาดทุกกระแสกิจกรรม
-                </h2>
+            <div class="container" data-aos="fade-up" data-aos-duration="1200">
+                <span class="badge">Next Generation Event Platform</span>
+                <h1 class="hero-title">ศูนย์รวมที่ให้คุณไม่พลาด<br>ทุกกระแส<span>กิจกรรม</span></h1>
                 <p class="hero-description">
-                    Events Hub คือแพลตฟอร์มศูนย์รวมกิจกรรมครบวงจรที่จะทำให้คุณไม่พลาดทุกกระแสสำคัญ
-                    เราเชื่อมโยงคุณเข้ากับงานสัมมนา เวิร์กช็อป และประสบการณ์ที่หลากหลาย เพื่อปลดล็อกโอกาสใหม่ๆ
-                    และสร้างแรงบันดาลใจในทุกวัน
+                    ยกระดับประสบการณ์การจัดการกิจกรรมในแคมปัสด้วยเทคโนโลยีอัจฉริยะ 
+                    เชื่อมโยงทุกโอกาส ปลดล็อกทุกศักยภาพในหนึ่งเดียว
                 </p>
                 <div class="hero-cta">
-                    <button class="btn">Get started</button>
-                    <button class="btn btn-secondary">Learn More</button>
-
+                    <a href="#features" class="btn btn-primary">สำรวจฟีเจอร์</a>
+                    <a href="https://github.com/cpecodebattle/cpecodebattle.github.io" target="_blank" class="btn btn-outline">GitHub Repo</a>
                 </div>
             </div>
         </section>
 
-        <!-- Problem Statement Section -->
-        <section id="problem" class="problem-section">
-            <div class="bg-box1">
-                <div class="container">
-                    <h2>The Problem We're Solving</h2>
-                    <h2>เบื่อไหม? กับความยุ่งยากแบบเดิมๆ ที่ EventHub จะเข้ามา "Reboot"</h2>
-                    <p class="section-description">
-                        เราเข้าใจดีว่าการค้นหาและจัดการกิจกรรมในแคมปัส ไม่ควรเป็นเรื่องยุ่งยากอีกต่อไป!
-                        ปัญหาเหล่านี้คือสิ่งที่ทำให้ประสบการณ์ของคุณไม่ราบรื่น:
-                    </p>
-                    <ul>
-                        <li>
-                            <span>🚧 วิกฤตข้อมูลกระจัดกระจาย:</span>
-                            คุณต้องตามหากิจกรรมจากทุกแพลตฟอร์ม ทำให้พลาดโอกาสสำคัญอยู่เสมอ เพราะขาด **"ศูนย์บัญชาการ"**
-                            ข้อมูลที่น่าเชื่อถือ
-                        </li>
-                        <li>
-                            <span>⏱️ คอขวด Check-in สุดล้าสมัย:</span>
-                            การยืนยันตัวตนด้วยกระดาษและ Excel ทำให้คิวยาว ความแม่นยำต่ำ
-                            และเสียเวลาอันมีค่าในการเข้าสู่กิจกรรม
-                        </li>
-                        <li>
-                            <span>📜 โหลดเอกสารของผู้จัดกิจกรรม:</span>
-                            กระบวนการอนุมัติกิจกรรมยังคงติดอยู่กับระบบ Manual และเอกสารกองโต
-                            ทำให้การจัดการงานเป็นเรื่องซับซ้อนเกินความจำเป็น
-                        </li>
-                        <li>
-                            <span>🔑 หลักฐานเข้าร่วมงานที่ไม่มั่นคง:</span>
-                            ทั้งผู้เข้าร่วมและผู้จัดงานขาดเครื่องมือยืนยันตัวตนที่รวดเร็วและปลอดภัย
-                            ทำให้เกิดความสับสนในวันงานจริง
-                        </li>
-                    </ul>
-                    <p>
-                        **EventHub** คือจุดจบของความยุ่งยากเหล่านี้! เราสร้างแพลตฟอร์มที่รวมทุกอย่างไว้ในที่เดียว
-                        เพื่อมอบประสบการณ์การจัดการและการเข้าร่วมกิจกรรมที่ **Smart, Seamless, และ Secure** อย่างแท้จริง
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="features" class="features-section">
+        <section id="problem">
             <div class="container">
-                <h2>EventHub Key Features: จัดการทุกกิจกรรมได้อย่างมืออาชีพ</h2>
-                <p class="section-description">
-                    เราเปลี่ยนความยุ่งยากให้เป็นความง่าย
-                    ด้วยฟีเจอร์ที่ออกแบบมาเพื่อทั้งผู้เข้าร่วมและผู้จัดกิจกรรมในแคมปัส
-                </p>
-
-                <div class="features-grid">
-
-                    <article class="feature-card">
-                        <div class="feature-icon">✨</div>
-                        <h3>ศูนย์รวมกิจกรรมอัจฉริยะ</h3>
-                        <p>ค้นหา กรอง และติดตามกิจกรรมทั้งหมดในมหาวิทยาลัยจากแพลตฟอร์มเดียว ไม่พลาดทุกโอกาสที่คุณสนใจ
-                        </p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>QR Code Check-in รวดเร็ว</h3>
-                        <p>เปลี่ยนการต่อคิวยาวด้วยระบบลงทะเบียนและยืนยันตัวตนด้วย QR Code ภายในไม่กี่วินาที แม่นยำ
-                            และไร้รอยต่อ</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">🛠️</div>
-                        <h3>เครื่องมือจัดการอีเวนท์เต็มรูปแบบ</h3>
-                        <p>สร้าง แก้ไข และจัดการข้อมูลกิจกรรม พร้อมดูสถิติการลงทะเบียนแบบเรียลไทม์ได้อย่างง่ายดาย</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">✅</div>
-                        <h3>ระบบอนุมัติออนไลน์</h3>
-                        <p>ผู้จัดสามารถติดตามสถานะการอนุมัติกิจกรรมได้ทันที ลดขั้นตอนเอกสารและร่นระยะเวลาดำเนินการ</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">👤</div>
-                        <h3>จัดการโปรไฟล์ผู้เข้าร่วม</h3>
-                        <p>ดูประวัติกิจกรรมที่เคยเข้าร่วมและจัดการข้อมูลส่วนตัวได้อย่างปลอดภัย พร้อมระบบ Login
-                            ที่ง่ายดาย</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>รองรับทุกอุปกรณ์</h3>
-                        <p>เข้าใช้งานได้ทุกที่ทุกเวลาบนทุกเบราว์เซอร์ ทั้ง Desktop, Tablet และ Mobile (Responsive
-                            Design)</p>
-                    </article>
-
+                <div class="section-header" data-aos="fade-up">
+                    <span class="sub-title">The Genesis</span>
+                    <h2 class="main-title">เบื่อไหมกับระบบเดิมๆ?</h2>
                 </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="how-section">
-            <div class="bg-box2">
-                <div class="container">
-                    <h2>How It Works</h2>
-                    <div class="steps">
-                        <article class="step">
-                            <span class="step-number">1</span>
-                            <h3>เข้าสู่ระบบและสร้างกิจกรรม</h3>
-                            <p>ผู้จัดงานเข้าสู่ระบบ ใช้เครื่องมือจัดการเพื่อสร้างรายละเอียดกิจกรรมทั้งหมดอย่างง่ายดาย
-                            </p>
-                        </article>
-
-                        <article class="step">
-                            <span class="step-number">2</span>
-                            <h3>ส่งคำขออนุมัติ</h3>
-                            <p>ส่งกิจกรรมเข้าสู่ระบบเพื่อให้ฝ่ายกิจการนักศึกษาพิจารณาอนุมัติทางออนไลน์</p>
-                        </article>
-
-                        <article class="step">
-                            <span class="step-number">3</span>
-                            <h3>เผยแพร่และติดตามผล</h3>
-                            <p>เมื่อได้รับการอนุมัติ กิจกรรมจะถูกเผยแพร่</p>
-                        </article>
-
-                        <article class="step">
-                            <span class="step-number">4</span>
-                            <h3>ค้นพบกิจกรรมที่สนใจ</h3>
-                            <p>ผู้ใช้ค้นหาและกรองกิจกรรมที่เปิดรับลงทะเบียนจากศูนย์รวมข้อมูล</p>
-                        </article>
-
-                        <article class="step">
-                            <span class="step-number">5</span>
-                            <h3>ลงทะเบียนและรับตั๋ว QR</h3>
-                            <p>คลิกเดียวเพื่อลงทะเบียนและรับ QR Code </p>
-                        </article>
-
-                        <article class="step">
-                            <span class="step-number">6</span>
-                            <h3>สแกนเข้าร่วมงานอย่างรวดเร็ว</h3>
-                            <p>ในวันงาน เพียงแสดง QR Code ให้ผู้จัดสแกนผ่านแอป เพื่อยืนยันตัวตนและเข้างานได้อย่างรวดเร็ว
-                            </p>
-                        </article>
+                
+                <div class="problem-grid">
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="p-icon">❌</span>
+                        <h4>ข้อมูลกระจัดกระจาย</h4>
+                        <p>พลาดโอกาสสำคัญเพราะต้องตามหาข่าวสารจากหลายที่</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="p-icon">⏳</span>
+                        <h4>คิวเช็คอินที่แสนยาว</h4>
+                        <p>การยืนยันตัวตนด้วยกระดาษที่ล้าสมัยและล่าช้า</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                        <span class="p-icon">📄</span>
+                        <h4>กองเอกสารมหาศาล</h4>
+                        <p>ระบบอนุมัติกิจกรรมแบบ Manual ที่ใช้เวลานานเกินจำเป็น</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
+        <section id="features">
             <div class="container">
-                <h2>EventHub: The Genesis of Change | พลิกโฉมประสบการณ์แคมปัส</h2>
-                <p class="section-description">
-                    EventHub ไม่ได้เป็นเพียงแพลตฟอร์ม แต่คือ Digital Solution ที่เกิดจากการถอดรหัส Pain Points
-                    ที่แท้จริงของ Community มหาวิทยาลัยของเรา
-                </p>
+                <div class="section-header" data-aos="fade-up">
+                    <span class="sub-title">Core Capabilities</span>
+                    <h2 class="main-title">จัดการทุกกิจกรรมได้อย่างมืออาชีพ</h2>
+                </div>
 
-                <p>
-                    The Catalyst (แรงขับเคลื่อน): เราเล็งเห็นถึงความท้าทายของ Legacy System
-                    ทั้งการตามหาข้อมูลที่กระจัดกระจาย และกระบวนการ Check-in ที่เป็นคอขวดในวันงาน
-                    ภารกิจของเราคือการสร้าง "Single Ecosystem" ที่รวมศูนย์ข้อมูลและกระบวนการทั้งหมด (Single Source of
-                    Truth) เพื่อ Empower ผู้จัดให้สร้างสรรค์งานคุณภาพ และผู้เข้าร่วมได้รับประสบการณ์ที่ Seamless
-                    อย่างแท้จริง
-                </p>
-
-                <p>
-                    Core Objectives (พันธกิจหลัก):
-                <ol class="about-objectives">
-                    <li>Optimize User Flow: ยกระดับการค้นหาและการลงทะเบียนให้รวดเร็วฉับไว ภายใต้คอนเซ็ปต์ *Less Click,
-                        More Action*</li>
-                    <li>End-to-End Digital Management: บริหารจัดการกิจกรรมตั้งแต่ต้นจนจบ (Creation-to-Check-in)
-                        ด้วยแพลตฟอร์มดิจิทัล 100%</li>
-                    <li>Future-Proof Data Integrity: สร้างมาตรฐานความน่าเชื่อถือระดับสูง (NFR-010)
-                        ผ่านหลักฐานการเข้าร่วมด้วย QR Code ที่มี Data Integrity แม่นยำ</li>
-                </ol>
-                </p>
-
-                <p>
-                    EventHub คือประตูสู่การขับเคลื่อนมหาวิทยาลัยของเราให้เป็น Smart Campus ที่มอบประสบการณ์กิจกรรมระดับ
-                    High-Impact และพร้อมรับอนาคต
-                </p>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="team-section">
-            <div class="container">
-                <h1>Our Team</h1>
-                <div class="team-grid">
-                    <!-- Team Member 1 -->
-                    <article class="team-member">
-                        <img src="pictures/แสก.png" alt="Member Name">
-                        <h3>เมธิวัฒน์</h3>
-                        <p class="role">Product Owner / Team Leader</p>
-                        <p class="student-id">67543206069-6 </p>
-                    </article>
-
-                    <!-- Team Member 2 -->
-                    <article class="team-member">
-                        <img src="pictures/sam.png"" alt=" Member Name">
-                        <h3>อชิตพล</h3>
-                        <p class="role">Frontend / System Analayst (SA)</p>
-                        <p class="student-id">67543206027-4</p>
-                    </article>
-
-                    <article class="team-member">
-                        <img src="pictures/นาง.jpg"" alt=" Member Name">
-                        <h3>ศราวุฒิ</h3>
-                        <p class="role">Backend / Tester</p>
-                        <p class="student-id">67543206076-1</p>
-                    </article>
-
-                    <article class="team-member">
-                        <img src="pictures/sor.jpg"" alt=" Member Name">
-                        <h3>พีสิรวิชญ์</h3>
-                        <p class="role">Frontend / System Analayst (SA)</p>
-                        <p class="student-id">67543206068-8</p>
-                    </article>
-
-                    <article class="team-member">
-                        <img src="pictures/แสก.png"" alt=" Member Name">
-                        <h3>ชาคริตส์</h3>
-                        <p class="role">Backend / Tester</p>
-                        <p class="student-id">7543206005-0</p>
-                    </article>
-
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="f-icon-wrap"><span class="f-icon">✨</span></div>
+                        <h4>ศูนย์รวมกิจกรรมอัจฉริยะ</h4>
+                        <p>ค้นหา กรอง และติดตามกิจกรรมทั้งหมดในมหาวิทยาลัยจากแพลตฟอร์มเดียว</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="f-icon-wrap"><span class="f-icon">⚡</span></div>
+                        <h4>QR Code Check-in</h4>
+                        <p>เปลี่ยนการต่อคิวยาวด้วยระบบลงทะเบียนผ่าน QR Code ที่แม่นยำและไร้รอยต่อ</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="f-icon-wrap"><span class="f-icon">🛠️</span></div>
+                        <h4>Event Management</h4>
+                        <p>เครื่องมือสร้างและจัดการกิจกรรม พร้อมสถิติเรียลไทม์สำหรับผู้จัด</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="f-icon-wrap"><span class="f-icon">✅</span></div>
+                        <h4>ระบบอนุมัติออนไลน์</h4>
+                        <p>ลดขั้นตอนเอกสารด้วยระบบอนุมัติผ่าน Digital Workflow 100%</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact/CTA Section -->
-        <section id="contact" class="contact-section">
+        <section id="how-it-works">
             <div class="container">
-                <h1>Interested in Our Project?</h1>
-                <button class="btn-third"><a href="https://gamerneed.com/">Contact Us </a></button>
+                <div class="section-header" data-aos="fade-up">
+                    <span class="sub-title">Process</span>
+                    <h2 class="main-title">6 Steps to Success</h2>
+                </div>
+                <div class="steps-container">
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="step-num">01</div>
+                        <h4>Create</h4>
+                        <p>ผู้จัดสร้างกิจกรรมในระบบ</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="step-num">02</div>
+                        <h4>Approve</h4>
+                        <p>อนุมัติผ่านระบบออนไลน์</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="step-num">03</div>
+                        <h4>Publish</h4>
+                        <p>เผยแพร่สู่สาธารณะ</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="step-num">04</div>
+                        <h4>Discover</h4>
+                        <p>ผู้เข้าร่วมค้นพบงาน</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="step-num">05</div>
+                        <h4>Register</h4>
+                        <p>คลิกเดียวรับ QR Ticket</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="step-num">06</div>
+                        <h4>Check-in</h4>
+                        <p>สแกนเข้างานรวดเร็ว</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="sub-title">Our Team</span>
+                    <h2 class="main-title">Masterminds Behind EventsHub</h2>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card" data-aos="fade-up">
+                        <div class="member-img">
+                            <img src="pictures/may.png" alt="เมธิวัฒน์">
+                        </div>
+                        <h4>เมธิวัฒน์</h4>
+                        <span class="role">Product Owner</span>
+                        <p class="id">67543206069-6</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img highlight">
+                            <img src="pictures/zam.png" alt="อชิตพล">
+                        </div>
+                        <h4>อชิตพล</h4>
+                        <span class="role">Frontend / SA</span>
+                        <p class="id">67543206027-4</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img highlight">
+                            <img src="pictures/zach.png" alt="ชาคริสต์">
+                        </div>
+                        <h4>ชาคริสต์</h4>
+                        <span class="role">Frontend / SA</span>
+                        <p class="id">67543206027-4</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img highlight">
+                            <img src="pictures/toey.png" alt="ศราวุฒิ">
+                        </div>
+                        <h4>ศราวุฒิ</h4>
+                        <span class="role">Frontend / SA</span>
+                        <p class="id">67543206027-4</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img highlight">
+                            <img src="pictures/pee.png" alt="พีสิรวิชญ์">
+                        </div>
+                        <h4>พีสิรวิชญ์</h4>
+                        <span class="role">Frontend / SA</span>
+                        <p class="id">67543206027-4</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta-section" data-aos="zoom-in">
+            <div class="container">
+                <h2>พร้อมจะเปลี่ยนประสบการณ์กิจกรรมแล้วหรือยัง?</h2>
+                <p>ร่วมเป็นส่วนหนึ่งของวิวัฒนาการใหม่ใน Smart Campus</p>
+                <a href="https://gamerneed.com/" class="btn btn-luxury">Contact Our Team</a>
             </div>
         </section>
     </main>
 
-    <!-- =========================== ASIDE (Optional) =========================== -->
-    <aside class="sidebar">
-
-    </aside>
-
-    <!-- =========================== FOOTER =========================== -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <!-- Footer Info -->
-                <div class="footer-info">
-                    <h4>EventsHub</h4>
-                    <p>ENGCE301: Software Design and Development</p>
-                    <p>Term Project - Group CPENo.1</p>
-                    <p>Rajamangala University of Technology Lanna</p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>EventsHub</h3>
+                    <p>Building the next generation of campus event experiences.</p>
                 </div>
-
-                <!-- Footer Links -->
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Explore</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#features">Features</a></li>
-                        <li><a href="https://github.com/cpecodebattle/cpecodebattle.github.io" target="_blank">GitHub
-                                Repository</a></li>
-                        <li><a href="week2/SRS.pdf">View SRS Document</a></li>
+                        <li><a href="week2/SRS.pdf">SRS Document</a></li>
                     </ul>
                 </div>
-
-                <!-- Footer Contact -->
                 <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>📧 Email: GAPTT@rmutl.ac.th</p>
-                    <p>📱 Tel: 02-474-0077</p>
+                    <h4>Get in Touch</h4>
+                    <p>📧 GAPTT@rmutl.ac.th</p>
+                    <p>📍 RMUTL, Thailand</p>
                 </div>
             </div>
-
-            <!-- Copyright -->
             <div class="footer-bottom">
-                <p>&copy; 2025 EventsHub. All rights reserved.</p>
-                <p>Developed with ❤️ by Group CPENo.1</p>
+                <p>&copy; 2026 EventsHub. All rights reserved. | Developed by Group CPENo.1</p>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 200,
+            easing: 'ease-in-out-cubic'
+        });
+    </script>
 </body>
-
 </html>
